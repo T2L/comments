@@ -1,11 +1,15 @@
 {
-    "name": "consolidation/comments",
+    "name": "t2l/comments",
     "description": "A tool for preserving comments, e.g. when parsing YAML files.",
     "license": "MIT",
     "authors": [
         {
             "name": "Greg Anderson",
             "email": "greg.1.anderson@greenknowe.org"
+        },
+        {
+            "name": "Roman Paska",
+            "email": "roman.paska@gmail.com"
         }
     ],
     "autoload":{
