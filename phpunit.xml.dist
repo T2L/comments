@@ -1,15 +1,24 @@
-<phpunit bootstrap="vendor/autoload.php" colors="true">
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap="vendor/autoload.php" colors="true"
+         beStrictAboutTestsThatDoNotTestAnything="true"
+         beStrictAboutOutputDuringTests="true"
+         beStrictAboutChangesToGlobalState="true">
+  <php>
+    <!-- Set error reporting to E_ALL. -->
+    <ini name="error_reporting" value="32767"/>
+    <!-- Do not limit the amount of memory tests take to run. -->
+    <ini name="memory_limit" value="-1"/>
+  </php>
   <testsuites>
     <testsuite name="comments">
       <directory prefix="Test" suffix=".php">tests</directory>
     </testsuite>
   </testsuites>
-  <logging>
-      <log type="coverage-clover" target="build/logs/clover.xml"/>
-  </logging>
+  <!-- Filter for coverage reports. -->
   <filter>
-    <whitelist processUncoveredFilesFromWhitelist="true">
-      <directory suffix=".php">src</directory>
+    <whitelist>
+      <directory>./src</directory>
     </whitelist>
   </filter>
 </phpunit>
