@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 class TestYamlComments extends TestCase
 {
-    function setUp()
+    function setUp(): void
     {
         $example_yml_path = __DIR__ . '/templates/example.pantheon.yml';
         $example_yml = file_get_contents($example_yml_path);
